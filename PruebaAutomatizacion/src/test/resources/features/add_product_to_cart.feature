@@ -5,6 +5,8 @@ Feature: Add a product to cart
 
   Scenario: Add to cart
     Given the user select the category product
+      | email                        | pass       | documentNumber | name    | lastName | birthDate  |
+      | gudeppeimelei-6931@gmail.com | Prueba*123 | 1017193825     | Yeisson | Pamplona | 22/07/1991 |
     When he add the product to cart
       | product            | size |
       | adidas Performance | 40   |

@@ -16,6 +16,8 @@ public class Driver {
         capabilities.setCapability("platformVersion", "9.0");
         capabilities.setCapability("appPackage", "br.com.dafiti");
         capabilities.setCapability("appActivity", "br.com.dafiti.activity.SplashSelectCountry_");
+        capabilities.setCapability("unicodeKeyboard", "false");
+        capabilities.setCapability("resetKeyboard", "false");
 
         try {
             return new io.appium.java_client.AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"),capabilities);

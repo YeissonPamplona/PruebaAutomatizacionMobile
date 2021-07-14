@@ -3,6 +3,7 @@ package com.sistecredito.pruebadafiti.tasks;
 import com.sistecredito.pruebadafiti.interactions.Search;
 import com.sistecredito.pruebadafiti.models.DataProduct;
 import com.sistecredito.pruebadafiti.questions.GetText;
+import com.sistecredito.pruebadafiti.userinterfaces.CategoriesSection;
 import com.sistecredito.pruebadafiti.userinterfaces.CommonElements;
 import com.sistecredito.pruebadafiti.userinterfaces.ShoesSection;
 import net.serenitybdd.screenplay.Actor;
@@ -22,7 +23,10 @@ public class Selected implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Search.theElement(ShoesSection.TENNIS_PRODUCT.of(dataProduct.getProduct())));
+        actor.attemptsTo(WaitUntil.the(CommonElements.CATEGORIES, WebElementStateMatchers.isClickable()),
+                Click.on(CommonElements.CATEGORIES),
+                Click.on(CategoriesSection.SHOES_OPTIONS),
+                Search.theElement(ShoesSection.TENNIS_PRODUCT.of(dataProduct.getProduct())));
         actor.remember("theProductSelected", GetText.ofTheElement(CommonElements.PRODUCT_NAME));
         actor.attemptsTo(Click.on(CommonElements.SIZE_PRODUCT.of(dataProduct.getSize())),
                 Click.on(CommonElements.BUY_BUTTON));

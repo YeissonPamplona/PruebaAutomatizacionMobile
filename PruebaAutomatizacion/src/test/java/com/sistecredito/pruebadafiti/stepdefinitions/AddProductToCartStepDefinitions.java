@@ -2,7 +2,9 @@ package com.sistecredito.pruebadafiti.stepdefinitions;
 
 import com.sistecredito.pruebadafiti.exceptions.MensajeExceptions;
 import com.sistecredito.pruebadafiti.models.DataProduct;
+import com.sistecredito.pruebadafiti.models.DataRegistation;
 import com.sistecredito.pruebadafiti.questions.GetText;
+import com.sistecredito.pruebadafiti.tasks.Registrer;
 import com.sistecredito.pruebadafiti.tasks.Selected;
 import com.sistecredito.pruebadafiti.tasks.GoTo;
 import com.sistecredito.pruebadafiti.userinterfaces.CartSection;
@@ -28,8 +30,9 @@ public class AddProductToCartStepDefinitions {
     }
 
     @Given("^the user select the category product$")
-    public void theUserSelectTheCategoryProduct() {
+    public void theUserSelectTheCategoryProduct(List<DataRegistation>dataRegistations) {
         theActorInTheSpotlight().wasAbleTo(GoTo.theCategoryProduct());
+        theActorInTheSpotlight().wasAbleTo(Registrer.inTheApp(dataRegistations.get(0)));
     }
 
 

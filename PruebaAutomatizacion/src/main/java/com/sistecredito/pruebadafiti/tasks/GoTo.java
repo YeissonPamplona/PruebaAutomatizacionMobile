@@ -16,10 +16,7 @@ public class GoTo implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(COUNTRY_SELECTION),
                 WaitUntil.the(MAN_CATEGORY, WebElementStateMatchers.isClickable()),
-                Click.on(MAN_CATEGORY),
-                WaitUntil.the(CommonElements.CATEGORIES, WebElementStateMatchers.isClickable()),
-                Click.on(CommonElements.CATEGORIES),
-                Click.on(CategoriesSection.SHOES_OPTIONS));
+                Click.on(MAN_CATEGORY));
     }
 
     public static GoTo theCategoryProduct(){
