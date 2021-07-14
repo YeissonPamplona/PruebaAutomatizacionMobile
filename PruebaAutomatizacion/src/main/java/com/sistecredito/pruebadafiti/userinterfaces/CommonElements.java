@@ -4,6 +4,10 @@ import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class CommonElements {
+
+    private CommonElements(){
+    }
+
     public static final Target CATEGORIES = Target.the("Categories").located(By.id("navigation_categories"));
     public static final Target SIZE_PRODUCT = Target.the("Size product").locatedBy("//*[@text='{0}']");
     public static final Target PRODUCT_NAME = Target.the("Producto name").located(By.id("product_name"));

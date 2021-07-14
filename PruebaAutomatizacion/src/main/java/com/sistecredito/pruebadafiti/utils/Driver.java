@@ -8,6 +8,8 @@ import java.net.URL;
 
 public class Driver {
 
+    private Driver(){}
+
     public static WebDriver mobile(){
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "emulator-5554");

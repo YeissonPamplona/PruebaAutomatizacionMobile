@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 
 public class RegistrerSection {
 
+    private RegistrerSection(){}
+
     public static final Target EMAIL = Target.the("Email").located(By.id("form_email"));
     public static final Target PASS = Target.the("Password").located(By.id("form_password"));
     public static final Target REPEAT_PASS = Target.the("Password").located(By.id("form_password_confirm"));
@@ -16,6 +18,6 @@ public class RegistrerSection {
     public static final Target BIRTH_DATE = Target.the("Birth date").located(By.id("form_birthday"));
     public static final Target GENDER = Target.the("Gender").located(By.id("form_gender"));
     public static final Target MASCULINO_GENDER = Target.the("Gender").locatedBy("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout[2]/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.TextView");
-    public static final Target BUTTON_SUSCRIPTION = Target.the("Gender").located(By.id("checkbox_newsletter_dafiti"));
+    public static final Target BUTTON_SUSCRIPTION = Target.the("Button suscription").located(By.id("checkbox_newsletter_dafiti"));
     public static final Target SAVE_BUTTON = Target.the("Save button").located(By.id("register_button"));
 }

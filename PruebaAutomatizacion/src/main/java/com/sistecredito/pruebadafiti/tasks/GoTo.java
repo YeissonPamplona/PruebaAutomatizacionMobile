@@ -1,7 +1,5 @@
 package com.sistecredito.pruebadafiti.tasks;
 
-import com.sistecredito.pruebadafiti.userinterfaces.CategoriesSection;
-import com.sistecredito.pruebadafiti.userinterfaces.CommonElements;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
